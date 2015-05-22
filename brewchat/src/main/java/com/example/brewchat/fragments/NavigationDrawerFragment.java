@@ -3,6 +3,7 @@ package com.example.brewchat.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,12 @@ public class NavigationDrawerFragment extends Fragment {
 
     @OnClick(R.id.contacts_nav_item)
     void contactsClicked() {
-        startActivity(new Intent(getActivity(), ContactsActivity.class));
+       // if (getActivity().equals(ContactsActivity.class)) {
+        //    Log.d("LOG"," We're in the Contact Activity" );
+        //}else {
+         //   Log.d("LOG", "We're not in the contact activity, we're in " +getActivity());
+            startActivity(new Intent(getActivity(), ContactsActivity.class));
+        //}
     }
 
     public NavigationDrawerFragment() {
